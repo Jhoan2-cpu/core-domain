@@ -8,6 +8,37 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use IncadevUns\CoreDomain\Enums\CourseVersionStatus;
 use IncadevUns\CoreDomain\Traits\CanBeAudited;
 
+/**
+ * @property int $id
+ * @property int $course_id
+ * @property string|null $version
+ * @property string $name
+ * @property numeric $price
+ * @property CourseVersionStatus $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \IncadevUns\CoreDomain\Models\Audit> $audits
+ * @property-read int|null $audits_count
+ * @property-read \IncadevUns\CoreDomain\Models\Course $course
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \IncadevUns\CoreDomain\Models\Group> $groups
+ * @property-read int|null $groups_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \IncadevUns\CoreDomain\Models\Module> $modules
+ * @property-read int|null $modules_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereCourseId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CourseVersion whereVersion($value)
+ *
+ * @mixin \Eloquent
+ */
 class CourseVersion extends Model
 {
     use CanBeAudited;

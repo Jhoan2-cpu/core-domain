@@ -6,6 +6,30 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use IncadevUns\CoreDomain\Enums\ApplicationStatus;
 
+/**
+ * @property int $id
+ * @property int $offer_id
+ * @property int $user_id
+ * @property string $cv_path
+ * @property ApplicationStatus $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \IncadevUns\CoreDomain\Models\Offer $offer
+ * @property-read \Illuminate\Foundation\Auth\User $user
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCvPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereOfferId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereUserId($value)
+ *
+ * @mixin \Eloquent
+ */
 class Application extends Model
 {
     protected $fillable = [
