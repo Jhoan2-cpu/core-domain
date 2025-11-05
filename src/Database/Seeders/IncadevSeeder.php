@@ -9,6 +9,7 @@ class IncadevSeeder extends Seeder
     public function run(): void
     {
         $this->call([
+            PermissionsSeeder::class,
             UserSeeder::class,
             AdministrativeSeeder::class,
             AcademicSeeder::class,

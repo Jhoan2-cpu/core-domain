@@ -298,5 +298,228 @@ class UserSeeder extends Seeder
                 'learning_goal' => 'Actualizarme en normas y mejores prácticas.',
             ]
         );
+
+        // 🧩 USUARIOS ADICIONALES PARA ROLES FALTANTES
+
+        // Infrastructure
+        $infrastructure1 = $userModelClass::firstOrCreate(
+            ['email' => 'carlos.tech@incadev.com'],
+            [
+                'name' => 'Carlos Vega',
+                'password' => Hash::make('password'),
+                'dni' => '00000013',
+                'fullname' => 'CARLOS VEGA TORRES',
+            ]
+        );
+        $infrastructure1->assignRole($infrastructureRole);
+
+        // Security
+        $security1 = $userModelClass::firstOrCreate(
+            ['email' => 'maria.security@incadev.com'],
+            [
+                'name' => 'Maria Rojas',
+                'password' => Hash::make('password'),
+                'dni' => '00000014',
+                'fullname' => 'MARIA ROJAS CAMPOS',
+            ]
+        );
+        $security1->assignRole($securityRole);
+
+        // Academic Analyst
+        $analyst1 = $userModelClass::firstOrCreate(
+            ['email' => 'roberto.analyst@incadev.com'],
+            [
+                'name' => 'Roberto Diaz',
+                'password' => Hash::make('password'),
+                'dni' => '00000015',
+                'fullname' => 'ROBERTO DIAZ MORALES',
+            ]
+        );
+        $analyst1->assignRole($academicAnalystRole);
+
+        // Web Developer
+        $web1 = $userModelClass::firstOrCreate(
+            ['email' => 'paula.web@incadev.com'],
+            [
+                'name' => 'Paula Herrera',
+                'password' => Hash::make('password'),
+                'dni' => '00000016',
+                'fullname' => 'PAULA HERRERA SOTO',
+            ]
+        );
+        $web1->assignRole($webRole);
+
+        // Survey Admin
+        $surveyAdmin1 = $userModelClass::firstOrCreate(
+            ['email' => 'carmen.survey@incadev.com'],
+            [
+                'name' => 'Carmen Torres',
+                'password' => Hash::make('password'),
+                'dni' => '00000017',
+                'fullname' => 'CARMEN TORRES RAMIREZ',
+            ]
+        );
+        $surveyAdmin1->assignRole($surveyAdminRole);
+
+        // Audit Manager
+        $auditManager1 = $userModelClass::firstOrCreate(
+            ['email' => 'sergio.audit@incadev.com'],
+            [
+                'name' => 'Sergio Ponce',
+                'password' => Hash::make('password'),
+                'dni' => '00000018',
+                'fullname' => 'SERGIO PONCE VILLEGAS',
+            ]
+        );
+        $auditManager1->assignRole($auditManagerRole);
+
+        // Human Resources
+        $hr1 = $userModelClass::firstOrCreate(
+            ['email' => 'patricia.hr@incadev.com'],
+            [
+                'name' => 'Patricia Gomez',
+                'password' => Hash::make('password'),
+                'dni' => '00000019',
+                'fullname' => 'PATRICIA GOMEZ VIDAL',
+            ]
+        );
+        $hr1->assignRole($humanResourcesRole);
+
+        // Financial Manager
+        $financial1 = $userModelClass::firstOrCreate(
+            ['email' => 'ricardo.finance@incadev.com'],
+            [
+                'name' => 'Ricardo Paredes',
+                'password' => Hash::make('password'),
+                'dni' => '00000020',
+                'fullname' => 'RICARDO PAREDES CASTRO',
+            ]
+        );
+        $financial1->assignRole($financialManagerRole);
+
+        // System Viewer
+        $viewer1 = $userModelClass::firstOrCreate(
+            ['email' => 'elena.viewer@incadev.com'],
+            [
+                'name' => 'Elena Ortiz',
+                'password' => Hash::make('password'),
+                'dni' => '00000021',
+                'fullname' => 'ELENA ORTIZ PEREZ',
+            ]
+        );
+        $viewer1->assignRole($systemViewerRole);
+
+        // Enrollment Manager
+        $enrollment1 = $userModelClass::firstOrCreate(
+            ['email' => 'gabriela.enrollment@incadev.com'],
+            [
+                'name' => 'Gabriela Suarez',
+                'password' => Hash::make('password'),
+                'dni' => '00000022',
+                'fullname' => 'GABRIELA SUAREZ MORENO',
+            ]
+        );
+        $enrollment1->assignRole($enrollmentManagerRole);
+
+        // Data Analyst
+        $dataAnalyst1 = $userModelClass::firstOrCreate(
+            ['email' => 'fernando.data@incadev.com'],
+            [
+                'name' => 'Fernando Ramos',
+                'password' => Hash::make('password'),
+                'dni' => '00000023',
+                'fullname' => 'FERNANDO RAMOS SILVA',
+            ]
+        );
+        $dataAnalyst1->assignRole($dataAnalystRole);
+
+        // Marketing
+        $marketing1 = $userModelClass::firstOrCreate(
+            ['email' => 'isabela.marketing@incadev.com'],
+            [
+                'name' => 'Isabela Castro',
+                'password' => Hash::make('password'),
+                'dni' => '00000024',
+                'fullname' => 'ISABELA CASTRO REYES',
+            ]
+        );
+        $marketing1->assignRole($marketingRole);
+
+        // Marketing Admin
+        $marketingAdmin1 = $userModelClass::firstOrCreate(
+            ['email' => 'diego.marketing@incadev.com'],
+            [
+                'name' => 'Diego Vargas',
+                'password' => Hash::make('password'),
+                'dni' => '00000025',
+                'fullname' => 'DIEGO VARGAS MUNOZ',
+            ]
+        );
+        $marketingAdmin1->assignRole($marketingAdminRole);
+
+        // Tutor
+        $tutorRole = Role::create(['name' => 'tutor']);
+        $tutor1 = $userModelClass::firstOrCreate(
+            ['email' => 'beatriz.tutor@incadev.com'],
+            [
+                'name' => 'Beatriz Navarro',
+                'password' => Hash::make('password'),
+                'dni' => '00000026',
+                'fullname' => 'BEATRIZ NAVARRO JIMENEZ',
+            ]
+        );
+        $tutor1->assignRole($tutorRole);
+
+        // Administrative Clerk
+        $clerkRole = Role::create(['name' => 'administrative_clerk']);
+        $clerk1 = $userModelClass::firstOrCreate(
+            ['email' => 'jorge.clerk@incadev.com'],
+            [
+                'name' => 'Jorge Delgado',
+                'password' => Hash::make('password'),
+                'dni' => '00000027',
+                'fullname' => 'JORGE DELGADO SANTOS',
+            ]
+        );
+        $clerk1->assignRole($clerkRole);
+
+        // Planner Admin
+        $plannerAdminRole = Role::create(['name' => 'planner_admin']);
+        $plannerAdmin1 = $userModelClass::firstOrCreate(
+            ['email' => 'andrea.planner@incadev.com'],
+            [
+                'name' => 'Andrea Bustamante',
+                'password' => Hash::make('password'),
+                'dni' => '00000028',
+                'fullname' => 'ANDREA BUSTAMANTE LOPEZ',
+            ]
+        );
+        $plannerAdmin1->assignRole($plannerAdminRole);
+
+        // Planner
+        $plannerRole = Role::create(['name' => 'planner']);
+        $planner1 = $userModelClass::firstOrCreate(
+            ['email' => 'miguel.planner@incadev.com'],
+            [
+                'name' => 'Miguel Cordero',
+                'password' => Hash::make('password'),
+                'dni' => '00000029',
+                'fullname' => 'MIGUEL CORDERO RUIZ',
+            ]
+        );
+        $planner1->assignRole($plannerRole);
+
+        // Continuous Improvement
+        $continuousImprovementRole = Role::create(['name' => 'continuous_improvement']);
+        $improvement1 = $userModelClass::firstOrCreate(
+            ['email' => 'laura.improvement@incadev.com'],
+            [
+                'name' => 'Laura Medina',
+                'password' => Hash::make('password'),
+                'dni' => '00000030',
+                'fullname' => 'LAURA MEDINA FLORES',
+            ]
+        );
+        $improvement1->assignRole($continuousImprovementRole);
     }
 }
