@@ -18,6 +18,13 @@ use IncadevUns\CoreDomain\Enums\MediaType;
  */
 class FindingEvidence extends Model
 {
+    /**
+     * Tabla asociada al modelo.
+     *
+     * @var string
+     */
+    protected $table = 'finding_evidences';
+    
     protected $fillable = [
         'audit_finding_id',
         'type',
