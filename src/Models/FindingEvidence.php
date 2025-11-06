@@ -24,7 +24,7 @@ class FindingEvidence extends Model
      * @var string
      */
     protected $table = 'finding_evidences';
-    
+
     protected $fillable = [
         'audit_finding_id',
         'type',
