@@ -65,7 +65,8 @@ class License extends Model
         return $this->belongsTo(Software::class);
     }
 
-    public function assignments(): HasMany {
+    public function assignments(): HasMany
+    {
         return $this->hasMany(LicenseAssignment::class, 'license_id');
     }
 }

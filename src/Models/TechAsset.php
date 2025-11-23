@@ -1,10 +1,11 @@
 <?php
 
 namespace IncadevUns\CoreDomain\Models;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use IncadevUns\CoreDomain\Enums\TechAssetStatus;
 use IncadevUns\CoreDomain\Enums\TechAssetType;
 
@@ -57,18 +58,19 @@ class TechAsset extends Model
         return $this->belongsTo(config('auth.providers.users.model', 'App\Models\User'));
     }
 
-    #me faltaría agregar estas líneas en el Incadev/CoreDomain
+    // me faltaría agregar estas líneas en el Incadev/CoreDomain
     // Licencias instaladas en este activo
-    public function licenseAssignments(): HasMany{
-        #te parece bien el hasMany o debería cambiar a hasOne?
+    public function licenseAssignments(): HasMany
+    {
+        // te parece bien el hasMany o debería cambiar a hasOne?
         return $this->hasMany(LicenseAssignment::class, 'asset_id');
     }
 
-    public function hardware(): HasOne{
+    public function hardware(): HasOne
+    {
         return $this->hasOne(Hardware::class, 'asset_id');
     }
 
-    
     /*public function softwares(): HasManyThrough{
         return $this->hasManyThrough(
             Software::class,
