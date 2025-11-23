@@ -28,7 +28,7 @@ enum NewsCategory: string
      */
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::TECHNOLOGY => 'Tecnología',
             self::SCIENCE => 'Ciencia',
             self::BUSINESS => 'Negocios',
@@ -51,6 +51,7 @@ enum NewsCategory: string
         foreach (self::cases() as $category) {
             $categories[$category->value] = $category->label();
         }
+
         return $categories;
     }
 }

@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         // 1. Limpiar duplicados - mantener solo el recovery_email del usuario más antiguo
-        DB::statement("
+        DB::statement('
             UPDATE users u1
             LEFT JOIN (
                 SELECT MIN(id) as min_id, recovery_email
@@ -27,7 +27,7 @@ return new class extends Migration
                 u1.recovery_code_expires_at = NULL
             WHERE u1.recovery_email IS NOT NULL
             AND u2.min_id IS NULL
-        ");
+        ');
 
         // 2. Renombrar las columnas
         DB::statement('ALTER TABLE users RENAME COLUMN recovery_email TO secondary_email');

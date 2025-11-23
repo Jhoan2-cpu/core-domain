@@ -21,7 +21,7 @@ enum SecurityEventSeverity: string
      */
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::INFO => 'Informativo',
             self::WARNING => 'Advertencia',
             self::CRITICAL => 'Crítico',
@@ -33,7 +33,7 @@ enum SecurityEventSeverity: string
      */
     public function color(): string
     {
-        return match($this) {
+        return match ($this) {
             self::INFO => 'blue',
             self::WARNING => 'yellow',
             self::CRITICAL => 'red',

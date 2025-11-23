@@ -307,7 +307,7 @@ class TechnologySeeder extends Seeder
         if ($securityRole) {
             foreach ($securityPermissions as $permissionName) {
                 $permission = Permission::where('name', $permissionName)->first();
-                if ($permission && !$securityRole->hasPermissionTo($permissionName)) {
+                if ($permission && ! $securityRole->hasPermissionTo($permissionName)) {
                     $securityRole->givePermissionTo($permission);
                 }
             }
@@ -317,7 +317,7 @@ class TechnologySeeder extends Seeder
         if ($adminRole) {
             foreach ($securityPermissions as $permissionName) {
                 $permission = Permission::where('name', $permissionName)->first();
-                if ($permission && !$adminRole->hasPermissionTo($permissionName)) {
+                if ($permission && ! $adminRole->hasPermissionTo($permissionName)) {
                     $adminRole->givePermissionTo($permission);
                 }
             }
@@ -424,7 +424,7 @@ Esta innovación marca un antes y un después en cómo se imparte la educación 
                 'metadata' => [
                     'author' => 'Equipo Incadev',
                     'reading_time' => '3 min',
-                    'tags' => ['educación', 'tecnología', 'IA', 'e-learning']
+                    'tags' => ['educación', 'tecnología', 'IA', 'e-learning'],
                 ],
             ],
             // NEWS 2 - Tecnología
@@ -453,7 +453,7 @@ El impacto de estas tecnologías se refleja en mejores tasas de retención estud
                 'metadata' => [
                     'author' => 'María González',
                     'reading_time' => '5 min',
-                    'tags' => ['IA', 'educación', 'tecnología', 'futuro']
+                    'tags' => ['IA', 'educación', 'tecnología', 'futuro'],
                 ],
             ],
             // NEWS 3 - Educación
@@ -484,7 +484,7 @@ Siguiendo estos consejos, podrás aprovechar al máximo tu experiencia educativa
                 'metadata' => [
                     'author' => 'Carlos Rodríguez',
                     'reading_time' => '4 min',
-                    'tags' => ['educación', 'tips', 'e-learning', 'estudiantes']
+                    'tags' => ['educación', 'tips', 'e-learning', 'estudiantes'],
                 ],
             ],
             // NEWS 4 - Negocios
@@ -511,7 +511,7 @@ Gracias a todos nuestros estudiantes, profesores y colaboradores por hacer esto 
                 'metadata' => [
                     'author' => 'Equipo Incadev',
                     'reading_time' => '2 min',
-                    'tags' => ['hito', 'comunidad', 'logro', 'crecimiento']
+                    'tags' => ['hito', 'comunidad', 'logro', 'crecimiento'],
                 ],
             ],
             // ANNOUNCEMENT 1
@@ -540,7 +540,7 @@ Las inscripciones están abiertas. ¡No te pierdas esta oportunidad de potenciar
                 'button_text' => 'Inscribirme ahora',
                 'metadata' => [
                     'background_color' => '#4F46E5',
-                    'text_color' => '#FFFFFF'
+                    'text_color' => '#FFFFFF',
                 ],
             ],
             // ANNOUNCEMENT 2
@@ -565,7 +565,7 @@ Pedimos disculpas por las molestias y agradecemos su comprensión. Este mantenim
                 'button_text' => 'Contactar soporte',
                 'metadata' => [
                     'background_color' => '#F59E0B',
-                    'text_color' => '#000000'
+                    'text_color' => '#000000',
                 ],
             ],
             // ALERT 1
@@ -587,7 +587,7 @@ Pedimos disculpas por las molestias y agradecemos su comprensión. Este mantenim
                 'button_text' => 'Ir a mi perfil',
                 'metadata' => [
                     'dismissible' => true,
-                    'icon' => 'info'
+                    'icon' => 'info',
                 ],
             ],
             // ALERT 2
@@ -612,7 +612,7 @@ Pedimos disculpas por las molestias y agradecemos su comprensión. Este mantenim
                 'metadata' => [
                     'dismissible' => false,
                     'icon' => 'megaphone',
-                    'promo_code' => 'PROMO30'
+                    'promo_code' => 'PROMO30',
                 ],
             ],
             // NEWS 5 - Ciencia
@@ -646,7 +646,7 @@ Los investigadores coinciden en que este enfoque representa el futuro de la educ
                 'metadata' => [
                     'author' => 'Dr. Ana Martínez',
                     'reading_time' => '6 min',
-                    'tags' => ['ciencia', 'neurociencia', 'aprendizaje', 'investigación']
+                    'tags' => ['ciencia', 'neurociencia', 'aprendizaje', 'investigación'],
                 ],
             ],
             // NEWS 6 - Salud
@@ -679,7 +679,7 @@ Recuerda: tu salud mental es tan importante como tu rendimiento académico. Cuid
                 'metadata' => [
                     'author' => 'Lic. Patricia Vega',
                     'reading_time' => '4 min',
-                    'tags' => ['salud mental', 'bienestar', 'estudiantes', 'consejos']
+                    'tags' => ['salud mental', 'bienestar', 'estudiantes', 'consejos'],
                 ],
             ],
         ];

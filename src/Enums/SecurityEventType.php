@@ -32,7 +32,7 @@ enum SecurityEventType: string
      */
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::LOGIN_SUCCESS => 'Inicio de sesión exitoso',
             self::LOGIN_FAILED => 'Intento de inicio de sesión fallido',
             self::LOGOUT => 'Cierre de sesión',
